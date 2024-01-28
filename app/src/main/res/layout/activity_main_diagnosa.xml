@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgsamsung"
+    android:orientation="vertical"
+    tools:context=".MainDiagnosaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/baso_lima_dara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="15dp"
+        app:cardElevation="8dp"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="HASIL DIAGNOSA KERUSAKAN"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kerusakanDiagnosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="0%"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="PERSENTASE KERUSAKAN"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hasilDiagnosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="0%"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="SOLUSI KERUSAKAN"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ketDiagnosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="Keterangan"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
+
+            <TableLayout
+                android:id="@+id/tablelayoutid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:padding="6dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="NO" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Aturan Rule"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row1"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IF G01 AND G02 AND G03 AND G04 AND G05 AND G06 THEN K01"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row2"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IF G11 AND G12 THEN K2"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row3"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IF G07 AND G08 AND G09 AND G010 AND G018 THEN K3"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row4"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="4" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="IF G013 AND G014 AND G015 AND G018 AND G019 AND G024 AND G025 AND G026 then K4"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row5"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="5" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="IF G012 AND G016 AND G017 THEN K5"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row6"
+                    android:background="#ffffff"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="6" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IF G020 AND G021 AND G022 THEN K6"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_margin="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="LCD Bergaris (G001)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Bercak hitam pada LCD (G002)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Layar Hijau (G003)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="LCD Blank/Hitam (G004)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Layar Bergaris (G005)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="GhostTouch (G006)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_margin="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="HP Mati Tiba-tiba Padahal Baterai Masih Banyak (G07)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Baterai HP Tidak Penuh Saat Di Cas (G08)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Baterai Boros (G09)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Baterai Bocor/Mengambang (G010)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Speaker Tidak Berfungsi (G011)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Tidak Bisa Charge (G012)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Sinyal Tidak Ada (G013)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Memori Tidak Terbaca (G014)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Simcard Tidak Terbaca (G015)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Tombol Volume Tidak Berfungsi (G016)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Tombol Power Tidak Berfungsi (G017)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Bootloop (G018)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Mati Total (G019)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Kamera Getar (G020)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Kamera Tidak Berfungsi (G021)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Kamera Depan Dan Belakang Tidak Berfungsi (G022)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Speaker Tidak Maksimal (G023)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text=" Penerima Telpon Tidak Bisa Mendengar Suara (G024)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Banyak Iklan Pop Up (G025)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="10dp"
+                app:cardElevation="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <CheckBox
+                    android:id="@+id/checkBox26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="HP Lambat (G026)"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnDiagnosa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="prosesDiagnosa"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp"
+                app:contentPadding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="DIAGNOSA KERUSAKAN"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>
+

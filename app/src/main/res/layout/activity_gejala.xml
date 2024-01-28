@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fotogejala"
+    tools:context=".gejala">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="377dp"
+                android:layout_height="1520dp"
+                android:layout_marginTop="180dp"
+                android:src="@drawable/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="LCD Bergaris"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Bercak hitam pada LCD"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/check1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check1"
+                app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Layar Hijau"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/check2"
+                app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+            <CheckBox
+                android:id="@+id/check4"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="LCD Blank/Hitam"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/check3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/check3"
+                app:layout_constraintTop_toBottomOf="@+id/check3" />
+
+            <CheckBox
+                android:id="@+id/check5"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Layar Bergaris"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/check4"
+                app:layout_constraintTop_toBottomOf="@+id/check4" />
+
+            <CheckBox
+                android:id="@+id/check6"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="GhostTouch"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/check5"
+                app:layout_constraintTop_toBottomOf="@+id/check5" />
+
+            <CheckBox
+                android:id="@+id/check7"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="LCD retak"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/check6"
+                app:layout_constraintTop_toBottomOf="@+id/check6" />
+
+            <CheckBox
+                android:id="@+id/check8"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="LCD pecah"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/check7"
+                app:layout_constraintTop_toBottomOf="@+id/check7" />
+
+            <CheckBox
+                android:id="@+id/check9"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Restart cuman sampe logo"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/check8"
+                app:layout_constraintTop_toBottomOf="@+id/check8" />
+
+            <CheckBox
+                android:id="@+id/check10"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Layar tidak bisa disentuh"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check9"
+                app:layout_constraintTop_toBottomOf="@+id/check9" />
+
+            <CheckBox
+                android:id="@+id/check11"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="HP mati tiba-tiba padahal baterai masih banyak"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check10"
+                app:layout_constraintTop_toBottomOf="@+id/check10" />
+
+            <CheckBox
+                android:id="@+id/check12"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Baterai HP tidak penuh saat di cas"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check11"
+                app:layout_constraintTop_toBottomOf="@+id/check11" />
+
+            <CheckBox
+                android:id="@+id/check13"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Baterai boros"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check12"
+                app:layout_constraintTop_toBottomOf="@+id/check12" />
+
+            <CheckBox
+                android:id="@+id/check14"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Baterai bocor/mengembang"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check13"
+                app:layout_constraintTop_toBottomOf="@+id/check13" />
+
+            <CheckBox
+                android:id="@+id/check15"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Speaker tidak berfungsi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check14"
+                app:layout_constraintTop_toBottomOf="@+id/check14" />
+
+            <CheckBox
+                android:id="@+id/check16"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Tidak bisa charge"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check15"
+                app:layout_constraintTop_toBottomOf="@+id/check15" />
+
+            <CheckBox
+                android:id="@+id/check17"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Sinyal tidak ada"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check16"
+                app:layout_constraintTop_toBottomOf="@+id/check16" />
+
+            <CheckBox
+                android:id="@+id/check18"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Memori tidak terbaca"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check17"
+                app:layout_constraintTop_toBottomOf="@+id/check17" />
+
+            <CheckBox
+                android:id="@+id/check19"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Simcard tidak terbaca"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check18"
+                app:layout_constraintTop_toBottomOf="@+id/check18" />
+
+            <CheckBox
+                android:id="@+id/check20"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Tombol volume tidak berfungsi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check19"
+                app:layout_constraintTop_toBottomOf="@+id/check19" />
+
+            <CheckBox
+                android:id="@+id/check21"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Tombol power tidak berfungsi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check20"
+                app:layout_constraintTop_toBottomOf="@+id/check20" />
+
+            <CheckBox
+                android:id="@+id/check22"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Bootloop"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check21"
+                app:layout_constraintTop_toBottomOf="@+id/check21" />
+
+            <CheckBox
+                android:id="@+id/check23"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Mati total"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check22"
+                app:layout_constraintTop_toBottomOf="@+id/check22" />
+
+            <CheckBox
+                android:id="@+id/check24"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Kamera getar"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check23"
+                app:layout_constraintTop_toBottomOf="@+id/check23" />
+
+            <CheckBox
+                android:id="@+id/check25"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Kamera tidak berfungsi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check24"
+                app:layout_constraintTop_toBottomOf="@+id/check24" />
+
+            <CheckBox
+                android:id="@+id/check26"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Salah satu kamera tidak fungsi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check25"
+                app:layout_constraintTop_toBottomOf="@+id/check25" />
+
+            <CheckBox
+                android:id="@+id/check27"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Speaker tidak maksimal"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check26"
+                app:layout_constraintTop_toBottomOf="@+id/check26" />
+
+            <CheckBox
+                android:id="@+id/check28"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Penerima telpon tidak bisa mendengar suara"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check27"
+                app:layout_constraintTop_toBottomOf="@+id/check27" />
+
+            <CheckBox
+                android:id="@+id/check29"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Banyak iklan pop up"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check28"
+                app:layout_constraintTop_toBottomOf="@+id/check28" />
+
+            <CheckBox
+                android:id="@+id/check30"
+                android:layout_width="362dp"
+                android:layout_height="51dp"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="HP Lambat"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/check29"
+                app:layout_constraintTop_toBottomOf="@+id/check29" />
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_below="@id/check30"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#020202"
+                android:fontFamily="@font/comic_neue_bold"
+                android:text="Hasil Diagnosa"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="#FFEB3B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/check30"
+                app:layout_constraintTop_toBottomOf="@id/check30"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
